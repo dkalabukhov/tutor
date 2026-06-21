@@ -74,13 +74,18 @@ img {
   right: 0;
   left: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .navbar-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.navbar.navbar-scroll {
+  background: rgba(235, 77, 85, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .navbar img {
