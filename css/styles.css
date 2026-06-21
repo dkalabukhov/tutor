@@ -64,6 +64,31 @@ img {
   border-color: #fff;
 }
 
+.section-header {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.section-header p {
+  font-size: 1.3rem;
+  color: var(--dark-color);
+}
+
+.heading-border {
+  width: 64px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 0 auto 2rem;
+}
+
 /* Navbar */
 .navbar {
   background: transparent;
@@ -134,14 +159,18 @@ img {
 }
 
 .navbar .mobile-menu-items {
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 80px;
   left: 0;
   width: 100%;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.8);
   opacity: 0.95;
-  padding: 3rem 2rem;
+  padding: 0 2rem 3rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   transform: translateX(100%);
@@ -204,6 +233,27 @@ img {
   height: 100px;
 }
 
+/* Learn Topics */
+.topics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.topic img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.topic h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.topic img:hover {
+  transform: scale(1.1);
+}
+
 /* Media Queries */
 @media (max-width: 1200px) {
   .hero .hero-flex {
@@ -218,9 +268,26 @@ img {
   .hero h1 {
     font-size: 3rem;
   }
+
+  .topics {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 992px) {
+  .main-menu-items {
+    display: none;
+  }
+
+  .navbar .mobile-menu {
+    display: block;
+  }
+
+  .navbar .mobile-menu-toggle {
+    display: block;
+    padding: 10px;
+  }
+
   .hero {
     text-align: center;
   }
@@ -237,21 +304,13 @@ img {
   .hero img {
     max-width: 600px;
   }
+
+  .topics {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-  .main-menu-items {
-    display: none;
-  }
-
-  .navbar .mobile-menu {
-    display: block;
-  }
-
-  .navbar .mobile-menu-toggle {
-    display: block;
-    padding: 10px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -266,5 +325,9 @@ img {
 
   .hero img {
     max-width: 350px;
+  }
+
+  .topics {
+    grid-template-columns: 1fr;
   }
 }
