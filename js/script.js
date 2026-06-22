@@ -1,3 +1,5 @@
+import { Accordion } from './Accordion.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuToggleButton = document.querySelector(
     '.navbar .mobile-menu-toggle',
@@ -17,5 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       navbar.classList.remove('navbar-scroll');
     }
+  });
+
+  const accordions = document.querySelectorAll('.accordion-item');
+
+  accordions.forEach((accordion) => {
+    new Accordion(accordion);
   });
 });
