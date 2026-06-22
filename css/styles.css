@@ -34,6 +34,15 @@ img {
 }
 
 /* Utility Classes */
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
 .container {
   max-width: 1200px;
@@ -165,6 +174,10 @@ img {
 .navbar a:hover {
   color: var(--secondary-color);
   background-size: 100% 2px;
+}
+
+.navbar-flex > a {
+  padding: 0;
 }
 
 .navbar i {

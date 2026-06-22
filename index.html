@@ -21,9 +21,11 @@
     <title>Welcome To Tutor</title>
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-flex container">
-        <img src="images/logo.svg" alt="Tutor" />
+        <a href="index.html" aria-labl="Logo Home Link">
+          <img src="images/logo.svg" alt="Tutor" />
+        </a>
 
         <div class="main-menu-items">
           <ul class="main-menu-list">
@@ -34,12 +36,20 @@
             <li><a href="#author">Author</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li>
-              <a href="https://facebook.com" target="_blank">
+              <a
+                aria-label="Follow Us On Facebook"
+                href="https://facebook.com"
+                target="_blank"
+              >
                 <i class="fa-brands fa-facebook"></i>
               </a>
             </li>
             <li>
-              <a href="https://twitter.com" target="_blank">
+              <a
+                aria-label="Follow Us On Twitter"
+                href="https://twitter.com"
+                target="_blank"
+              >
                 <i class="fa-brands fa-twitter"></i>
               </a>
             </li>
@@ -49,7 +59,14 @@
         <!-- Mobile Menu -->
         <div class="mobile-menu">
           <!-- Hamburger Button -->
-          <div class="mobile-menu-toggle">
+          <div
+            class="mobile-menu-toggle"
+            role="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu-items"
+            aria-label="Open Mobile Menu"
+            tabindex="0"
+          >
             <i class="fas fa-bars fa-2x"></i>
           </div>
           <!-- Mobile Menu Items -->
@@ -62,12 +79,20 @@
               <li><a href="#author">Author</a></li>
               <li><a href="contact.html">Contact</a></li>
               <li>
-                <a href="https://facebook.com" target="_blank">
+                <a
+                  aria-label="Follow Us On Facebook"
+                  href="https://facebook.com"
+                  target="_blank"
+                >
                   <i class="fa-brands fa-facebook"></i>
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com" target="_blank">
+                <a
+                  aria-label="Follow Us On Twitter"
+                  href="https://twitter.com"
+                  target="_blank"
+                >
                   <i class="fa-brands fa-twitter"></i>
                 </a>
               </li>
@@ -448,29 +473,49 @@
         <div class="stats-content">
           <div class="stats-numbers">
             <div>
-              <h3 class="counter" data-speed="10" data-total="2000">
+              <h3
+                aria-labelledby="stats-happy-users"
+                class="counter"
+                data-speed="10"
+                data-total="2000"
+              >
                 <span class="counter-value">0</span
                 ><span class="counter-suffix"></span>
               </h3>
-              <p>Happy Users</p>
+              <p id="stats-happy-users">Happy Users</p>
             </div>
             <div>
-              <h3 class="counter" data-speed="20" data-total="358">
+              <h3
+                aria-labelledby="state-issues-solved"
+                class="counter"
+                data-speed="20"
+                data-total="358"
+              >
                 <span class="counter-value">0</span>
               </h3>
-              <p>Issues Solved</p>
+              <p id="state-issues-solved">Issues Solved</p>
             </div>
             <div>
-              <h3 class="counter" data-speed="20" data-total="980">
+              <h3
+                aria-labelledby="stats-good-reviews"
+                class="counter"
+                data-speed="20"
+                data-total="980"
+              >
                 <span class="counter-value">0</span>
               </h3>
-              <p>Good Reviews</p>
+              <p id="stats-good-reviews">Good Reviews</p>
             </div>
             <div>
-              <h3 class="counter" data-speed="20" data-total="216">
+              <h3
+                aria-labelledby="stats-case-studies"
+                class="counter"
+                data-speed="20"
+                data-total="216"
+              >
                 <span class="counter-value">0</span>
               </h3>
-              <p>Case Studies</p>
+              <p id="stats-case-studies">Case Studies</p>
             </div>
           </div>
 
@@ -492,11 +537,13 @@
           platform. Join our newsletter community today!
         </p>
         <form>
+          <label class="sr-only" for="email">Email</label>
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Enter your email"
+            autocomplete="email"
           />
           <button type="submit" class="btn">Subscribe</button>
         </form>

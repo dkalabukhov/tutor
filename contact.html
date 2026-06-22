@@ -21,9 +21,11 @@
     <title>Welcome To Tutor</title>
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-flex container">
-        <img src="images/logo.svg" alt="Tutor" />
+        <a href="index.html" aria-labl="Logo Home Link">
+          <img src="images/logo.svg" alt="Tutor" />
+        </a>
 
         <div class="main-menu-items">
           <ul class="main-menu-list">
@@ -32,14 +34,22 @@
             <li><a href="index.html#summary">Summary</a></li>
             <li><a href="index.html#takeaways">Takeaways</a></li>
             <li><a href="index.html#author">Author</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li>
-              <a href="https://facebook.com" target="_blank">
+              <a
+                aria-label="Follow Us On Facebook"
+                href="https://facebook.com"
+                target="_blank"
+              >
                 <i class="fa-brands fa-facebook"></i>
               </a>
             </li>
             <li>
-              <a href="https://twitter.com" target="_blank">
+              <a
+                aria-label="Follow Us On Twitter"
+                href="https://twitter.com"
+                target="_blank"
+              >
                 <i class="fa-brands fa-twitter"></i>
               </a>
             </li>
@@ -49,7 +59,14 @@
         <!-- Mobile Menu -->
         <div class="mobile-menu">
           <!-- Hamburger Button -->
-          <div class="mobile-menu-toggle">
+          <div
+            class="mobile-menu-toggle"
+            role="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu-items"
+            aria-label="Open Mobile Menu"
+            tabindex="0"
+          >
             <i class="fas fa-bars fa-2x"></i>
           </div>
           <!-- Mobile Menu Items -->
@@ -60,14 +77,22 @@
               <li><a href="index.html#summary">Summary</a></li>
               <li><a href="index.html#takeaways">Takeaways</a></li>
               <li><a href="index.html#author">Author</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="contact.html">Contact</a></li>
               <li>
-                <a href="https://facebook.com" target="_blank">
+                <a
+                  aria-label="Follow Us On Facebook"
+                  href="https://facebook.com"
+                  target="_blank"
+                >
                   <i class="fa-brands fa-facebook"></i>
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com" target="_blank">
+                <a
+                  aria-label="Follow Us On Twitter"
+                  href="https://twitter.com"
+                  target="_blank"
+                >
                   <i class="fa-brands fa-twitter"></i>
                 </a>
               </li>
@@ -93,9 +118,16 @@
         </p>
 
         <form>
-          <input type="text" name="name" placeholder="Name" />
-          <input type="text" name="email" placeholder="Email" />
-          <textarea name="message" placeholder="message"></textarea>
+          <label class="sr-only" for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Name" />
+          <label class="sr-only" for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Email" />
+          <label class="sr-only" for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="message"
+          ></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
       </div>
