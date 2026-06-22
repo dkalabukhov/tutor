@@ -1,4 +1,5 @@
 import { Accordion } from './Accordion.js';
+import { animateStats } from './animateStats.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuToggleButton = document.querySelector(
@@ -25,5 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   accordions.forEach((accordion) => {
     new Accordion(accordion);
+  });
+
+  const observer = animateStats();
+
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach((counter) => {
+    observer.observe(counter);
   });
 });
